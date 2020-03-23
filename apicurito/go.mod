@@ -3,16 +3,25 @@ module github.com/apicurio/apicurio-operators/apicurito
 go 1.13
 
 require (
-	github.com/go-openapi/spec v0.19.4
+	github.com/RHsyseng/operator-utils v0.0.0-20200318230845-8e48081eaa5a
+	github.com/ghodss/yaml v1.0.1-0.20190212211648-25d852aebe32
+	github.com/go-openapi/spec v0.19.6
+	github.com/gobuffalo/packr/v2 v2.7.1
 	github.com/imdario/mergo v0.3.8
+	github.com/karrick/godirwalk v1.15.5 // indirect
 	github.com/openshift/api v3.9.1-0.20190924102528-32369d4db2ad+incompatible
 	github.com/operator-framework/operator-sdk v0.15.0
 	github.com/prometheus/client_golang v1.2.1
-	github.com/spf13/cobra v0.0.5
-	github.com/stretchr/testify v1.4.0
-	k8s.io/api v0.17.0
+	github.com/sirupsen/logrus v1.5.0 // indirect
+	github.com/spf13/cobra v0.0.6
+	github.com/stretchr/testify v1.5.1
+	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59 // indirect
+	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a // indirect
+	golang.org/x/sys v0.0.0-20200321134203-328b4cd54aae // indirect
+	golang.org/x/tools v0.0.0-20200323171731-e609210bcd3f // indirect
+	k8s.io/api v0.17.2
 	k8s.io/apiextensions-apiserver v0.17.0 // indirect
-	k8s.io/apimachinery v0.17.0
+	k8s.io/apimachinery v0.17.2
 	k8s.io/client-go v12.0.0+incompatible
 	k8s.io/kube-openapi v0.0.0-20191107075043-30be4d16710a
 	sigs.k8s.io/controller-runtime v0.4.0
@@ -48,4 +57,9 @@ replace (
 	github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309 // Required by Helm
 	github.com/prometheus/prometheus => github.com/prometheus/prometheus v0.0.0-20190424153033-d3245f150225
 	k8s.io/helm => k8s.io/helm v2.16.1+incompatible
+)
+
+replace (
+	github.com/gobuffalo/packr/v2 => github.com/gobuffalo/packr/v2 v2.7.1
+	github.com/openshift/api => github.com/openshift/api v0.0.0-20200205145930-e9d93e317dd1
 )
